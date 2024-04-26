@@ -1,0 +1,14 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"strict": true,
+		"noImplicitAny": true,
+		"target": "ES2015",
+		"outDir": "js",
+		"sourceMap": true,
+		"declarationMap": true,
+		"declaration": true,
+		"declarationDir": "js/decl"
+	},
+	"include": ["ts/*.ts"]
+}
