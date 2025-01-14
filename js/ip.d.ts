@@ -114,7 +114,7 @@ declare namespace AyrA {
      * @param sub subdomain to connect to. Used to force IPv4 or IPv6. Default is client preferred method
      * @returns API response
      */
-    export function Ping(sub?: IpHost): Promise<PingApiResponse>;
+    export function ping(sub?: IpHost): Promise<PingApiResponse>;
     export {};
 }
 //# sourceMappingURL=ip.d.ts.map

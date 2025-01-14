@@ -146,7 +146,7 @@ var AyrA;
      * @param sub subdomain to connect to. Used to force IPv4 or IPv6. Default is client preferred method
      * @returns API response
      */
-    async function Ping(sub) {
+    async function ping(sub) {
         if (!sub) {
             sub = "ip";
         }
@@ -160,6 +160,6 @@ var AyrA;
         }
         return await response.json();
     }
-    AyrA.Ping = Ping;
+    AyrA.ping = ping;
 })(AyrA || (AyrA = {}));
 //# sourceMappingURL=ip.js.map

@@ -65,7 +65,7 @@ namespace AyrA {
 	 * @param sub subdomain to connect to. Used to force IPv4 or IPv6. Default is client preferred method
 	 * @returns API response
 	 */
-	export async function Ping(sub?: IpHost): Promise<PingApiResponse> {
+	export async function ping(sub?: IpHost): Promise<PingApiResponse> {
 		if (!sub) {
 			sub = "ip"
 		};
@@ -79,6 +79,4 @@ namespace AyrA {
 		}
 		return await response.json() as PingApiResponse;
 	}
-
-
 }
