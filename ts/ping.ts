@@ -33,7 +33,9 @@ namespace AyrA {
 		"SentTo": string,
 		/**
 		 * IP address that responded.
-		 * Usually the same as "SendTo" but can be different, especially on failure because failure codes are usually sent by a different device
+		 * Usually the same as "SentTo" but can be different,
+		 * especially on failure because failure codes are usually sent by a different device.
+		 * May be null, especially if no response was received
 		 */
 		"ReplyFrom": string | null,
 		/** Result of the ping */
@@ -41,7 +43,7 @@ namespace AyrA {
 		/**
 		 * Number of milliseconds until an answer was obtained.
 		 * Will likely be zero if "Result" isn't "Success"
-		*/
+		 */
 		"RoundtripTime": number
 	};
 
