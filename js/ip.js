@@ -139,4 +139,27 @@ var AyrA;
         return value.match(/\W/) === null;
     }
 })(AyrA || (AyrA = {}));
+var AyrA;
+(function (AyrA) {
+    /**
+     * Pings the current client and performs a traceroute
+     * @param sub subdomain to connect to. Used to force IPv4 or IPv6. Default is client preferred method
+     * @returns API response
+     */
+    async function Ping(sub) {
+        if (!sub) {
+            sub = "ip";
+        }
+        ;
+        if (!sub.match(/^ip[46]?$/i)) {
+            throw new Error(`Invalid subdomain: ${sub}`);
+        }
+        const response = await fetch(`https://${sub}.ayra.ch/ping`);
+        if (!response.ok) {
+            throw new AyrA.IpError("Got unexpected status response", AyrA.ErrorCodes.InvalidHttpStatus, { status: response.status, statusText: response.statusText });
+        }
+        return await response.json();
+    }
+    AyrA.Ping = Ping;
+})(AyrA || (AyrA = {}));
 //# sourceMappingURL=ip.js.map

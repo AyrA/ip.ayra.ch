@@ -4,11 +4,10 @@
 		"strict": true,
 		"noImplicitAny": true,
 		"target": "ESNext",
-		"outDir": "js",
+		"outFile": "js/ip.js",
 		"sourceMap": true,
 		"declarationMap": true,
-		"declaration": true,
-		"declarationDir": "js/decl"
+		"declaration": true
 	},
 	"include": ["ts/*.ts"]
 }

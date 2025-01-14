@@ -5,18 +5,23 @@ This is the JS and TS library to make requests to https://ip.ayra.ch from your w
 ## Installation
 
 You can either include the files in the `ts` or `js` folder.
-Use the `ts` folder if your project uses TypeScript and you want the JS files built together with the rest of your TypeScript.
-Use the `js` folder if you don't have typescript or don't want the library to be part of your build process.
+- "ts": Recommended if your project uses TypeScript and you want the JS files built together with the rest of your TypeScript.
+- "js": For all other projects or to exclude this library from your TypeScript build process.
 
 To use this like any other external library, add the js file from the `js` directory to your library folder,
-and add the TS declaration file from `js/decl` to your declaration folder if you haven't set up your tsconfig to globally search for declarations.
+and add the `ip.d.ts` TS declaration file to your declaration folder if you haven't set up your tsconfig to globally search for declarations.
 
-## Usage
+## Usage IP Retrieval
 
 - `AyrA.getIp(errorAsNull)`: Get the current IP address. Lets the browser decide whether to use IPv4 or IPv6
 - `AyrA.getIpv4(errorAsNull)`: Get the current IP address. Forces IPv4
 - `AyrA.getIpv6(errorAsNull)`: Get the current IP address. Forces IPv6
 - `AyrA.getIpAddresses(errorAsNull)`: Get the current IP address. Returns an object literal in the form `{v4:string|null, v6:string|null}`
+
+## Usage Ping and Traceroute
+
+- `AyrA.ping("ip"|"ip4"|"ip6")`: Performing a ping and traceroute to the current client, optionally forcing IPv4 or IPv6
+- `AyrA.ping()`: Alias for using `"ip"` as parameter
 
 ## Handling Errors
 

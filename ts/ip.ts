@@ -1,7 +1,6 @@
 "use strict";
 
 namespace AyrA {
-
 	/** Structure used to return IPv4 and V6 addresses simultaneously */
 	type IpInfo = {
 		/** IPv4 address */
